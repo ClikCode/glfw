@@ -60,7 +60,7 @@ void _glfwPollMonitorsMir(void)
             monitor->mir.curMode  = out->current_mode;
             monitor->modes = _glfwPlatformGetVideoModes(monitor, &monitor->modeCount);
 
-            _glfwInputMonitor(monitor, GLFW_CONNECTED, _GLFW_SECONDARY_MONITOR);
+            _glfwInputMonitor(monitor, GLFW_CONNECTED, _GLFW_INSERT_LAST);
         }
     }
 

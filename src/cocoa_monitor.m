@@ -256,7 +256,7 @@ void _glfwPollMonitorsNS(void)
 
         free(name);
 
-        _glfwInputMonitor(monitor, GLFW_CONNECTED, _GLFW_SECONDARY_MONITOR);
+        _glfwInputMonitor(monitor, GLFW_CONNECTED, _GLFW_INSERT_LAST);
     }
 
     for (i = 0;  i < disconnectedCount;  i++)

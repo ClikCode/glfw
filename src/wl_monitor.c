@@ -85,7 +85,7 @@ static void done(void* data, struct wl_output* output)
 {
     struct _GLFWmonitor *monitor = data;
 
-    _glfwInputMonitor(monitor, GLFW_CONNECTED, _GLFW_SECONDARY_MONITOR);
+    _glfwInputMonitor(monitor, GLFW_CONNECTED, _GLFW_INSERT_LAST);
 }
 
 static void scale(void* data,

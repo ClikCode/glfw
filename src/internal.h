@@ -48,8 +48,8 @@
 #define GLFW_INCLUDE_NONE
 #include "../include/GLFW/glfw3.h"
 
-#define _GLFW_PRIMARY_MONITOR   0
-#define _GLFW_SECONDARY_MONITOR 1
+#define _GLFW_INSERT_FIRST      0
+#define _GLFW_INSERT_LAST       1
 
 typedef int GLFWbool;
 

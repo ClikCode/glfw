@@ -132,7 +132,7 @@ void _glfwPollMonitorsWin32(void)
 
     for (adapterIndex = 0;  ;  adapterIndex++)
     {
-        int type = _GLFW_SECONDARY_MONITOR;
+        int type = _GLFW_INSERT_LAST;
 
         ZeroMemory(&adapter, sizeof(DISPLAY_DEVICEW));
         adapter.cb = sizeof(DISPLAY_DEVICEW);
@@ -144,7 +144,7 @@ void _glfwPollMonitorsWin32(void)
             continue;
 
         if (adapter.StateFlags & DISPLAY_DEVICE_PRIMARY_DEVICE)
-            type = _GLFW_PRIMARY_MONITOR;
+            type = _GLFW_INSERT_FIRST;
 
         if (hasDisplays)
         {
@@ -173,7 +173,7 @@ void _glfwPollMonitorsWin32(void)
                 _glfwInputMonitor(createMonitor(&adapter, &display),
                                   GLFW_CONNECTED, type);
 
-                type = _GLFW_SECONDARY_MONITOR;
+                type = _GLFW_INSERT_LAST;
             }
         }
         else

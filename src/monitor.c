@@ -94,7 +94,7 @@ void _glfwInputMonitor(_GLFWmonitor* monitor, int action, int type)
         _glfw.monitors =
             realloc(_glfw.monitors, sizeof(_GLFWmonitor*) * _glfw.monitorCount);
 
-        if (type == _GLFW_PRIMARY_MONITOR)
+        if (type == _GLFW_INSERT_FIRST)
         {
             memmove(_glfw.monitors + 1,
                     _glfw.monitors,
